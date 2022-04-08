@@ -4,14 +4,12 @@
  * @type { Object.<string, import("knex").Knex.Config> }
  */
 module.exports = {
-
-
-
   development: {
-    client: 'postgresql',
+    client: 'pg',
     connection: {
       database: 'knexdb',
       user:     'postgres',
+      port: 2627,
       password: 'uchiha2627'
     },
     pool: {
@@ -21,8 +19,5 @@ module.exports = {
     migrations: {
       tableName: 'knex_migrations'
     }
-  },
-
-
-
+  }
 };
